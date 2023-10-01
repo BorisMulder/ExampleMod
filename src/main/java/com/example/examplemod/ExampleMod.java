@@ -18,11 +18,10 @@ package com.example.examplemod;
 @cpw.mods.fml.common.Mod(modid=ExampleMod.MOD_ID, name=ExampleMod.MOD_NAME, version=ExampleMod.VERSION, dependencies="required-after:gregapi_post")
 public final class ExampleMod extends gregapi.api.Abstract_Mod {
 	/** Your Mod-ID has to be LOWERCASE and without Spaces. Uppercase Chars and Spaces can create problems with Resource Packs. This is a vanilla forge "Issue". */
-	public static final String MOD_ID = "insert_your_modid_here"; // <-- TODO: you need to change this to the ID of your own Mod, and then remove this Comment after you did that.
-	/** This is your Mods Name */
-	public static final String MOD_NAME = "Insert_your_Mod_Name_here"; // <-- TODO: you need to change this to the Name of your own Mod, and then remove this Comment after you did that.
-	/** This is your Mods Version */
-	public static final String VERSION = "EXAMPLE-MC1710"; // <-- TODO: you need to change this to the Version of your own Mod, and then remove this Comment after you did that.
+    public static final String MOD_ID = "GRADLETOKEN_MODID";
+	public static final String MOD_NAME = "GRADLETOKEN_MODNAME";
+	public static final String VERSION = "GRADLETOKEN_VERSION";
+	public static final String GROUPNAME = "GRADLETOKEN_GROUPNAME";
 	/** Contains a ModData Object for ID and Name. Doesn't have to be changed. */
 	public static gregapi.code.ModData MOD_DATA = new gregapi.code.ModData(MOD_ID, MOD_NAME);
 
@@ -170,7 +169,7 @@ public final class ExampleMod extends gregapi.api.Abstract_Mod {
 		tExampleRegistry.add("Flux Examplium Furnace"       , "Example Mod", 4, 0, gregapi.tileentity.machines.MultiTileEntityBasicMachineFlux      .class, gregapi.data.MT.Invar   .mToolQuality, 16, tMachineBlock, gregapi.util.UT.NBT.make(gregapi.data.CS.NBT_MATERIAL, gregapi.data.MT.Invar    , gregapi.data.CS.NBT_HARDNESS, 6.0F, gregapi.data.CS.NBT_RESISTANCE, 6.0F, gregapi.data.CS.NBT_COLOR, gregapi.util.UT.Code.getRGBInt(gregapi.data.MT.Invar .fRGBaSolid), gregapi.data.CS.NBT_INPUT, 512, gregapi.data.CS.NBT_TEXTURE, "exampliumfurnace", gregapi.data.CS.NBT_GUI, MOD_ID+":textures/gui/machines/ExampliumFurnace", gregapi.data.CS.NBT_ENERGY_ACCEPTED, gregapi.data.TD.Energy.RF, gregapi.data.CS.NBT_RECIPEMAP, tRecipeMap, gregapi.data.CS.NBT_EFFICIENCY, 10000, gregapi.data.CS.NBT_INV_SIDE_IN, gregapi.data.CS.SBIT_L, gregapi.data.CS.NBT_INV_SIDE_AUTO_IN, gregapi.data.CS.SIDE_LEFT, gregapi.data.CS.NBT_INV_SIDE_OUT, gregapi.data.CS.SBIT_R, gregapi.data.CS.NBT_INV_SIDE_AUTO_OUT, gregapi.data.CS.SIDE_RIGHT, gregapi.data.CS.NBT_ENERGY_ACCEPTED_SIDES, gregapi.data.CS.SBIT_D), "wMh", "BCB", 'M', gregapi.data.OP.casingMachineDouble.dat(gregapi.data.MT.Invar ), 'B', gregapi.util.ST.make(net.minecraft.init.Blocks.brick_block, 1, gregapi.data.CS.W), 'C', gregapi.data.MT.DATA.CIRCUITS[3]);
 
 		// Makes Examplium Fluid Pipes, which are as good as Stainless Steel ones of GT.
-		gregapi.tileentity.connectors.MultiTileEntityPipeFluid.addFluidPipes(30, 0, 250, true, true, false, true, false, true, true, tExampleRegistry, tMachineBlock, gregapi.tileentity.connectors.MultiTileEntityPipeFluid.class, (long)(tExamplium.mMeltingPoint * 1.25), tExamplium);
+		gregapi.tileentity.connectors.MultiTileEntityPipeFluid.addFluidPipes(30, 0, 250, true, true, false, false, true, false, true, true, tExampleRegistry, tMachineBlock, gregapi.tileentity.connectors.MultiTileEntityPipeFluid.class, (long)(tExamplium.mMeltingPoint * 1.25), tExamplium);
 
 		// Makes Iron Item Pipes, which are as good as Brass ones. Why not Examplium? Because the Recipes would conflict with the Fluid Pipe above in that case.
 		gregapi.tileentity.connectors.MultiTileEntityPipeItem.addItemPipes(100, 0, 32768, 1, true, true, tExampleRegistry, tMetalBlock, gregapi.tileentity.connectors.MultiTileEntityPipeItem.class, gregapi.data.MT.Fe);
